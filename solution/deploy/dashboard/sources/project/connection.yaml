@@ -1,0 +1,10 @@
+# This file was automatically generated
+name: project
+type: postgres
+options:
+  host: ep-dawn-darkness-803041.us-west-2.aws.neon.tech
+  port: 5432
+  database: neondb
+  ssl:
+    sslmode: require
+    rejectUnauthorized: true
