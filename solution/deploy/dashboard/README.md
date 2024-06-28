@@ -1,46 +1,27 @@
-# Evidence Template Project
+# Dashboard Deployment
 
-## Using Codespaces
+This dasboard was created using Evidence. See more about Evidence [here](https://.evidence.dev)
 
-If you are using this template in Codespaces, click the `Start Evidence` button in the bottom status bar. This will install dependencies and open a preview of your project in your browser - you should get a popup prompting you to open in browser.
+## Pre-requisites
 
-Or you can use the following commands to get started:
+- Postgres Database - You can use the seed.sql file to create the tables and load the data
 
+## How to run
+
+1. Clone the repository
+2. Create a connection.options.yaml file in sources/project/ with the following content
+```yaml
+    user: base64 encoded your posgres database user
+    password: base64 encoded your posgres database password
+    ssl: {}
+```
+3. If necessary, change host, port or database in sources/project/connection.yaml
+4. Run the following command to install the dependencies
 ```bash
 npm install
-npm run sources
-npm run dev -- --host 0.0.0.0
 ```
-
-See [the CLI docs](https://docs.evidence.dev/cli/) for more command information.
-
-**Note:** Codespaces is much faster on the Desktop app. After the Codespace has booted, select the hamburger menu → Open in VS Code Desktop.
-
-## Get Started from VS Code
-
-The easiest way to get started is using the [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=evidence-dev.evidence):
-
-1. Install the extension from the VS Code Marketplace
-2. Open the Command Palette (Ctrl/Cmd + Shift + P) and enter `Evidence: New Evidence Project`
-3. Click `Start Evidence` in the bottom status bar
-
-## Get Started using the CLI
-
+5. Run the following command to start the application
 ```bash
-npx degit evidence-dev/template my-project
-cd my-project 
-npm install 
-npm run sources
-npm run dev 
+npm run dev
 ```
-
-Check out the docs for [alternative install methods](https://docs.evidence.dev/getting-started/install-evidence) including Docker, Github Codespaces, and alongside dbt.
-
-
-
-## Learning More
-
-- [Docs](https://docs.evidence.dev/)
-- [Github](https://github.com/evidence-dev/evidence)
-- [Slack Community](https://slack.evidence.dev/)
-- [Evidence Home Page](https://www.evidence.dev)
+6. Open your browser and go to http://localhost:3000
