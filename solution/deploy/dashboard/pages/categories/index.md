@@ -2,10 +2,10 @@
 
 ```sql categories
     Select 
-      Distinct(primaryCategories) as name,
-      'categories/' || primaryCategories as link,
-      count(primaryCategories) as total
-    from project.reviews
+      Distinct category as name,
+      'categories/' || category as link,
+      count(category) as total
+    from reviews
     group by 1
     having total > 1
 ```
