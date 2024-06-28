@@ -6,11 +6,16 @@ This a simple application taht uses a LSTM model to predict the sentiment of a r
 
 - Docker
 - Postgres Database - You can use seed.sql to create the tables and load the data
+- Git LFS
 
 ## How to run
 
 1. Clone the repository
-2. Run the following command to build the Docker image
+2. Pull lfs files
+```bash
+git lfs pull
+```
+3. Run the following command to build the Docker image
 ```bash
 docker build -t sentiment-lstm .
 ```

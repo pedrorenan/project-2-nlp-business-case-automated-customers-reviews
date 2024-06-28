@@ -14,7 +14,6 @@ RUN pip3 install -r /app/requirements.txt
 
 # Copy the saved model to the serving directory
 COPY sentiment_model /models/sentiment_model/1
-COPY sentiment_model/variables/variables.data-00000-of-00001 /models/sentiment_model/1/variables/variables.data-00000-of-00001
 
 # Copy Streamlit app files
 COPY app.py /app/app.py
